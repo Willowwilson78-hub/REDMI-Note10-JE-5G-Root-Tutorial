@@ -5,7 +5,7 @@ Codename: iris
 Orginal MIUI Version: MIUI 14.0.26(Android 13)
 ==================================
 This guide shows how to:
-- downgrade MIUI 14.0.26 → 14.0.21
+- downgrade MIUI 14.0.26 → 14.0.21(because i can't dump newest version, i use MIUI 14.0.21 from https://sourceforge.net/projects/redmi-note-10-je-rom/files/FastbootROM/)
 - flash partition
 - root with Magisk
 ==================================
@@ -64,3 +64,4 @@ or download it from the official Magisk release.
 
 "This is my first tutorial. There may be some mistakes.'
 "Feel free to report any issues."
+
