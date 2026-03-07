@@ -6,12 +6,13 @@ Orginal MIUI Version: MIUI 14.0.26(Android 13)
 ==================================
 This guide shows how to:
 - downgrade MIUI 14.0.26 → 14.0.21
-- flash super partition
+- flash partition
 - root with Magisk
 ==================================
 ⚠ WARNING
 This guide is ONLY for Redmi Note 10 JE (iris).
 Flashing on other devices may cause a hard brick.
+Flash at your own risk.
 ==================================
 1️⃣.Requirements:
 • Unlocked bootloader
@@ -22,6 +23,7 @@ Flashing on other devices may cause a hard brick.
 + You may use files from other sources.
 However, I am not responsible for any damage caused by incorrect files.
 Always make sure the files are compatible with Redmi Note 10 JE (iris) before flashing.
+==================================
 2️⃣.Files Needed:
 • boot.img
 • vendor_boot.img
@@ -30,11 +32,35 @@ Always make sure the files are compatible with Redmi Note 10 JE (iris) before fl
 • super.img
 • patched_boot.img
 • platform-tools (ADB & Fastboot)
+==================================
 3️⃣.Steps:
 • Step 1 — Boot to Fastboot
     1. Power off the phone.
     2. Hold Volume Down + Power.
     3. Connect phone to PC.
-  (Or you can type "adb reboot recovery" to get in Fastboot)
+  (Or you can type "adb reboot bootloader" to get in Fastboot)
 • Step 2 — Check Fastboot connection
-    1. Type "fastboot devices" if it show serial number you can do next step, if
+    Type "fastboot devices" if it show serial number you can do next step. If not, checking the cable again or reinstall USB driver
+• Step 3 - Flash
+    1. Type all command:
+        "fastboot flash super super.img"
+        "fastboot flash boot boot.img"
+        "fastboot flash vendor_boot vendor_boot.img"
+        "fastboot flash dtbo dtbo.img"
+        "fastboot flash vbmeta vbmeta.img"
+        "fastboot flash boot_a magisk_patched.img"
+        "fastboot flash boot_b magisk_patched.img"
+    2. Then Type "fastboot reboot" to reboot(The first boot may loop once and enter recovery. If that happens, select "Wipe Data / Factory Reset"), when done reboot into system, Install the Magisk app (v27.0) from this repository 
+or download it from the official Magisk release.
+    3. Install "Root Checker" to check root status
+==================================
+    4️⃣. Your device should now be rooted.
+                    Enjoy!
+================================================================================
+  Updating MIUI via OTA will overwrite the patched boot image and remove root access.
+  In some cases, it may also cause a bootloop.
+  It is recommended to disable automatic system updates after rooting.
+================================================================================
+
+"This is my first tutorial. There may be some mistakes.'
+"Feel free to report any issues."
