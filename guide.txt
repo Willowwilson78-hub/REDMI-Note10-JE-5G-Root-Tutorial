@@ -1,0 +1,40 @@
+# REDMI Note10 JE 5G Root Tutorial
+==================================
+Device: Redmi Note 10 JE 5G
+Codename: iris
+Orginal MIUI Version: MIUI 14.0.26(Android 13)
+==================================
+This guide shows how to:
+- downgrade MIUI 14.0.26 → 14.0.21
+- flash super partition
+- root with Magisk
+==================================
+⚠ WARNING
+This guide is ONLY for Redmi Note 10 JE (iris).
+Flashing on other devices may cause a hard brick.
+==================================
+1️⃣.Requirements:
+• Unlocked bootloader
+• PC with ADB & Fastboot installed
+• USB cable
+• Battery at least 50%
+• Download the files from this repository
++ You may use files from other sources.
+However, I am not responsible for any damage caused by incorrect files.
+Always make sure the files are compatible with Redmi Note 10 JE (iris) before flashing.
+2️⃣.Files Needed:
+• boot.img
+• vendor_boot.img
+• dtbo.img
+• vbmeta.img
+• super.img
+• patched_boot.img
+• platform-tools (ADB & Fastboot)
+3️⃣.Steps:
+• Step 1 — Boot to Fastboot
+    1. Power off the phone.
+    2. Hold Volume Down + Power.
+    3. Connect phone to PC.
+  (Or you can type "adb reboot recovery" to get in Fastboot)
+• Step 2 — Check Fastboot connection
+    1. Type "fastboot devices" if it show serial number you can do next step, if
