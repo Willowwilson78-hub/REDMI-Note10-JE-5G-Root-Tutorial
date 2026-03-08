@@ -70,3 +70,7 @@ or download it from the official Magisk release.
 "Feel free to report any issues."
 
 
+Copyright (c) 2026 WillowWilson78-hub
+This tutorial is written by WillowWilson78-hub.
+
+
