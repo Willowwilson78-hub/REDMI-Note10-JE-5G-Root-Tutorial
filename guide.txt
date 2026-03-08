@@ -2,6 +2,10 @@
 ==================================
 Device: Redmi Note 10 JE 5G
 Codename: iris
+CPU: Snapdragon 480
+Ram: 4GB
+Internal Storage: 64GB
+
 Orginal MIUI Version: MIUI 14.0.26(Android 13)
 ==================================
 This guide shows how to:
@@ -64,4 +68,5 @@ or download it from the official Magisk release.
 
 "This is my first tutorial. There may be some mistakes.'
 "Feel free to report any issues."
+
 
