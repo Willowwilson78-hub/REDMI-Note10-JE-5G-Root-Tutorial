@@ -29,7 +29,7 @@ However, I am not responsible for any damage caused by incorrect files.
 Always make sure the files are compatible with Redmi Note 10 JE (iris) before flashing.
 ==================================
 2️⃣.Files Needed:
-• boot.img
+• boot.img (use Magisk to patch)
 • vendor_boot.img
 • dtbo.img
 • vbmeta.img
@@ -52,11 +52,13 @@ Always make sure the files are compatible with Redmi Note 10 JE (iris) before fl
         "fastboot flash vendor_boot vendor_boot.img"
         "fastboot flash dtbo dtbo.img"
         "fastboot flash vbmeta vbmeta.img"
+    2. "fastboot reboot" reboot to system tto check if the MIUI version can be downgraded.
+    3. If it downgraded, "adb reboot bootloader", then type:   
         "fastboot flash boot_a magisk_patched.img"
         "fastboot flash boot_b magisk_patched.img"
-    2. Then Type "fastboot reboot" to reboot(The first boot may loop once and enter recovery. If that happens, select "Wipe Data / Factory Reset"), when done reboot into system, Install the Magisk app (v27.0) from this repository 
+    4. Then Type "fastboot reboot" to reboot(The first boot may loop once and enter recovery. If that happens, select "Wipe Data / Factory Reset"), when done reboot into system, Install the Magisk app (v27.0) from this repository 
 or download it from the official Magisk release.
-    3. Install "Root Checker" to check root status
+    5. Install "Root Checker" to check root status
 ==================================
     4️⃣. Your device should now be rooted.
                     Enjoy!
@@ -72,5 +74,3 @@ or download it from the official Magisk release.
 
 Copyright (c) 2026 WillowWilson78-hub
 This tutorial is written by WillowWilson78-hub.
-
-
